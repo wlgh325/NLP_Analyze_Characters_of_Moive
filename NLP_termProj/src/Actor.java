@@ -1,10 +1,18 @@
 
 public class Actor {
+	
 	private String name;			//	name of actor
 	private int count;				//	number of actor's script
 	private float weight;			//	score of actor
 	
 	/*	Constructor	*/
+	
+	Actor(){
+		this.name = null;
+		this.count = 0;
+		this.weight = 0;
+	}
+	
 	public Actor(String name) {
 		this.name = name;
 		this.count = 0;
