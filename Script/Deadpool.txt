@@ -1,20 +1,8 @@
-﻿                  DEADPOOL
-
-
-
-                        Written by
+﻿                        Written by
 
                  Rhett Reese & Paul Wernick
 
-
-
-
                          Final Shooting Script - November 16, 2015
-
-
-
-
-
 
     OVER BLACK. Low volume, through a tinny speaker, JUICE
     NEWTON'S `ANGEL OF THE MORNING.'
@@ -52,7 +40,6 @@
                 Dopinder.
 
                           DEADPOOL
-                    (still upside-down)
                 Pool. Deadpool.
 
     Dopinder is remarkably UNAFFECTED by the lunatic in his cab.
@@ -3939,7 +3926,6 @@ RS40   CONTINUED:                                                         RS40
                                                                    (CONTINUED)
                                                                         67.
                    Deadpool   Final Shooting Script     11/16/15
-     CONTINUED:
 
                             AJAX
                       (impressed)
@@ -4534,7 +4520,7 @@ K44/VK44 INT.   RICE WORLD - NIGHT                                    K44/VK44
                                                                        77.
                      Deadpool   Final Shooting Script   11/16/15
 K44/VK44
-       CONTINUED:                                                    K44/VK44
+K44/VK44       CONTINUED:                                                    K44/VK44
                               DEADPOOL (CONT'D)
                     Literally - this suit cost Fox a million
                     dollars.
@@ -4595,7 +4581,7 @@ L44/VL44 EXT. ALLEY - NIGHT                                           L44/VL44
                                                                        78.
                      Deadpool   Final Shooting Script   11/16/15
 L44/VL44
-       CONTINUED:                                                    L44/VL44
+L44/VL44       CONTINUED:                                                    L44/VL44
 
                               RECRUITER
                     And I pride myself on being persuasive.
@@ -6188,7 +6174,7 @@ VA60   CONTINUED:                                                     VA60
      PUNCH-BOWL. The blade PENETRATES the PLEXI and tears into
      the RESTRAINT holding Vanessa's RIGHT WRIST, partly FRAYING
      it. AIR seeps through the CRACK. Vanessa catches a tiny
-     BREATH. She TUGS on the frayed RESTRAINT.
+     BREATH. She TUGS on the frayed RESTRAINT
 
                             AJAX
                   I hear you grow back parts. When I get
@@ -6955,3 +6941,4 @@ V76   INT.   SUBURBAN HOME - DAY - POST CREDIT SEQUENCE                 V76
                            DEADPOOL (O.S.) (CONT'D)
                      (a la Ferris)
                  Boom, boom, chicka chickah...
+FINISH
