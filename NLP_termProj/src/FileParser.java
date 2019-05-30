@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class FileParser {
-	private ArrayList<Scene> scenes;
+
 	// Constructor
 	FileParser(){
 		
@@ -34,9 +34,10 @@ public class FileParser {
         
         String line = "";
         
-        scenes = new ArrayList<Scene>();
+        ArrayList<Scene> scenes = new ArrayList<Scene>();
         ArrayList<String> indicator = new ArrayList<String>();
         indicator.add("CUT TO");
+        indicator.add("CONTINUED");
         
         ArrayList<Actor> actors = new ArrayList<Actor>();
         int totalCount = 0;
@@ -56,14 +57,6 @@ public class FileParser {
         		scene_flag = -1;
         	}
         	else if (line.contains("EXT.")) {
-        		scene = new Scene(actors, totalCount);
-        		scenes.add(scene);
-        		
-        		actors = new ArrayList<Actor>();
-        		totalCount = 0;
-        		scene_flag = -1;
-        	}	
-        	else if (line.contains("CONTINUED:")) {
         		scene = new Scene(actors, totalCount);
         		scenes.add(scene);
         		
@@ -133,15 +126,5 @@ public class FileParser {
         bufReader.close();
         
 	}
-
-	public ArrayList<Scene> getScenes() {
-		return scenes;
-	}
-
-	public void setScenes(ArrayList<Scene> scenes) {
-		this.scenes = scenes;
-	}
-	
-	
 	
 }
