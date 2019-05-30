@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class FileParser {
-
+	private ArrayList<Scene> scenes;
 	// Constructor
 	FileParser(){
 		
@@ -34,7 +34,7 @@ public class FileParser {
         
         String line = "";
         
-        ArrayList<Scene> scenes = new ArrayList<Scene>();
+        scenes = new ArrayList<Scene>();
         ArrayList<String> indicator = new ArrayList<String>();
         indicator.add("CUT TO");
         
@@ -133,5 +133,15 @@ public class FileParser {
         bufReader.close();
         
 	}
+
+	public ArrayList<Scene> getScenes() {
+		return scenes;
+	}
+
+	public void setScenes(ArrayList<Scene> scenes) {
+		this.scenes = scenes;
+	}
+	
+	
 	
 }

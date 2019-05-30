@@ -1,20 +1,22 @@
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class ScriptAnalzer {
 	private ArrayList<Scene> scenes;
 	
 	public ScriptAnalzer() {
+		
 	}
 
 	
 	public void analyzeScriptFile(String filePath) {
 		File file = new File(filePath);
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(file));
+			FileParser fileparser = new FileParser();
+			fileparser.ReadFile(filePath);
+			scenes = fileparser.getScenes();
 /*///////////////////////////////////////////////////////////////////
 	filePath에서 영화 스크립트를 읽어서 배열 scenes를 완성시키면 됨.
 			
@@ -22,6 +24,9 @@ public class ScriptAnalzer {
 			
 ///////////////////////////////////////////////////////////////////*/
 		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

@@ -47,6 +47,6 @@ public class Actor {
 	
 	@Override
 	public String toString() {
-		return "Actor " + this.name + " speaks " + count + "times...\n weight : " + this.weight; 
+		return "\nActor " + this.name + " speaks " + count + "times, weight : " + this.weight; 
 	}
 }

@@ -1,11 +1,18 @@
-import java.io.IOException;
+// NLP_Analyze_Characters_of_Moive
 
 public class Main {
-
-	public static void main(String[] args) throws IOException{
-		String scriptFileName = "./Script/Deadpool.txt";
-		FileParser fileparser = new FileParser();
-		fileparser.ReadFile(scriptFileName);
+	public static String inputSource = "./Script/Deadpool.txt";
+	
+	public static void main(String[] args) {
+		// 스크립트 분석을 위한 ScriptAnalzer 생성
+		ScriptAnalzer scriptAnalzer = new ScriptAnalzer();
+		
+		// ScriptAnalzer 구현해야 할 것
+		// 1. 영화 스크립트를 읽어서 분석. ScriptAnalzer 내 scenes을 채우기
+		scriptAnalzer.analyzeScriptFile(inputSource);
+		// 2. Python 그림 그려주는 프로그램에 들어갈 input형식에 맞추어 data write
+		scriptAnalzer.generateActorMapData();
 	}
-
+	
+	
 }
