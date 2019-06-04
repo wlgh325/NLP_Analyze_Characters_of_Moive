@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class FileParser {
 
+	private ArrayList<Scene> scenes;
 	// Constructor
 	FileParser(){
 		
@@ -34,7 +35,7 @@ public class FileParser {
         
         String line = "";
         
-        ArrayList<Scene> scenes = new ArrayList<Scene>();
+        scenes = new ArrayList<Scene>();
         ArrayList<String> indicator = new ArrayList<String>();
         indicator.add("CUT TO");
         indicator.add("CONTINUED");
@@ -117,14 +118,20 @@ public class FileParser {
         }	//end of reading file
         
         // print
-        for(int i = 1; i<scenes.size(); i++) {
-        	System.out.println("Scene " + i);
-        	System.out.println("Total Count: " + scenes.get(i).getTotalCount());
-        	System.out.println("Actor: " + scenes.get(i).getActors().toString());
+        scenes.remove(0);	//	첫 씬은 무의미
+        for(int i = 0; i < scenes.size(); i++) {
+//        	System.out.println("Scene " + (i+1));
+//        	System.out.println("Total Count: " + scenes.get(i).getTotalCount());
+        	scenes.get(i).computeWeight();	//	가중치 계산 추가
+//        	System.out.println("Actor: " + scenes.get(i).getActors().toString());
         }
         
         bufReader.close();
         
+	}
+	
+	public ArrayList<Scene> getScenes() {
+		return this.scenes;
 	}
 	
 }

@@ -36,7 +36,14 @@ public class Actor {
 	public void setCount(int count) {
 		this.count = count;
 	}
-	
+	public float getWeight() {
+		return weight;
+	}
+
+	public void setWeight(float weight) {
+		this.weight = weight;
+	}
+
 	public void addCount() {
 		this.count++;
 	}
