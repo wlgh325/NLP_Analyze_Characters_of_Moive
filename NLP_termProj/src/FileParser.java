@@ -120,10 +120,10 @@ public class FileParser {
         // print
         scenes.remove(0);	//	첫 씬은 무의미
         for(int i = 0; i < scenes.size(); i++) {
-//        	System.out.println("Scene " + (i+1));
-//        	System.out.println("Total Count: " + scenes.get(i).getTotalCount());
-        	scenes.get(i).computeWeight();	//	가중치 계산 추가
-//        	System.out.println("Actor: " + scenes.get(i).getActors().toString());
+        	System.out.println("Scene " + (i+1));
+        	System.out.println("Total Count: " + scenes.get(i).getTotalCount());
+//        	scenes.get(i).computeWeight();	//	가중치 계산 추가
+        	System.out.println("Actor: " + scenes.get(i).getActors().toString());
         }
         
         bufReader.close();
