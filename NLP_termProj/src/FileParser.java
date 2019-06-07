@@ -82,7 +82,7 @@ public class FileParser {
             		if( (line.charAt(i) >= 'A' && line.charAt(i) <= 'Z')) {
             			literal_length ++;
             		}
-            		else if (line.charAt(i) == ' ')
+            		else if (line.charAt(i) == ' ' || line.charAt(i) == '\t')
             			space_count ++;	
             	}
         	}
