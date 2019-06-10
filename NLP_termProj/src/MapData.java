@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.TreeMap;
 
 public class MapData {
@@ -27,6 +28,59 @@ public class MapData {
 	public void setEdgeData(double[][] edgeData) {
 		this.edgeData = edgeData;
 	}
+	
+	public double getNodeAverage() {
+		List<Double> values = new ArrayList<>(nodeData.values());
+		double sum = 0;
+		for (int i = 0; i < values.size(); i++)
+			sum += values.get(i);
+		return sum / values.size();
+	}
+	
+	public double getEdgeAverage() {
+		int n = edgeData.length;
+		double sum = 0;
+		int count = 0;
+		for (int i = 0; i < n; i++) 
+			for (int j = i+1; j < n; j++) 
+				if (edgeData[i][j] != 0) {
+					sum += edgeData[i][j];
+					count++;
+				}
+		return sum / count;
+	}
+	
+	public double getEdgeAverageWith0() {
+		int n = edgeData.length;
+		double sum = 0;
+		for (int i = 0; i < n; i++) 
+			for (int j = i+1; j < n; j++) 
+				sum += edgeData[i][j];
+		return sum / ((n-1)*(n-2) / 2);
+	}
+	
+	public double getNodeStandardDeviation() {
+		List<Double> values = new ArrayList<>(nodeData.values());
+		double mean = getNodeAverage();
+		double sum = 0;
+		for (int i = 0; i < values.size(); i++)
+			sum += Math.pow(values.get(i) - mean, 2);
+		return Math.sqrt(sum / values.size());
+	}
+
+	public double getEdgeStandardDeviation() {
+		int n = edgeData.length;
+		double sum = 0;
+		int count = 0;
+		for (int i = 0; i < n; i++) 
+			for (int j = i+1; j < n; j++) 
+				if (edgeData[i][j] != 0) {
+					sum += Math.pow(edgeData[i][j], 2);
+					count++;
+				}
+		return Math.sqrt(sum / count);
+	}
+
 	
 	public ArrayList<String> getNames() {
 		ArrayList<String> names = new ArrayList<>(nodeData.keySet());
