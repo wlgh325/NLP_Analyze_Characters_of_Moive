@@ -39,6 +39,13 @@ public class FileParser {
         ArrayList<String> indicator = new ArrayList<String>();
         indicator.add("CUT TO");
         indicator.add("CONTINUED");
+        indicator.add("BACK ON");
+        indicator.add("AT THE");
+        indicator.add("WHO DROVE ME TO TRAIN UNTIL MY");
+        indicator.add("MONTAGE");
+        indicator.add("ON A");
+        indicator.add("ALL");
+        indicator.add("VILLAGE");
         
         ArrayList<Actor> actors = new ArrayList<Actor>();
         int totalCount = 0;

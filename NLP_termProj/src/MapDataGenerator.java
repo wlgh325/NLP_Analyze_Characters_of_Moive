@@ -130,8 +130,8 @@ public class MapDataGenerator {
 				for (int i = 0; i < actorNum; i++) {
 					for (int j = i + 1; j < actorNum; j++) {
 						if (i != j)
-							mapEdgeData[positions.get(i)][positions.get(j)] += actors.get(i).getWeight()
-									* actors.get(j).getWeight(); // 가중치 = 배우가중치*상대배우가중치
+							mapEdgeData[positions.get(i)][positions.get(j)] += 
+								actors.get(i).getWeight() * actors.get(j).getWeight(); // 가중치 = 배우가중치*상대배우가중치
 					}
 				}
 			}
@@ -161,8 +161,8 @@ public class MapDataGenerator {
 				for (int i = 0; i < actorNum; i++) {
 					for (int j = i + 1; j < actorNum; j++) {
 						if (i != j)
-							mapEdgeData[positions.get(i)][positions.get(j)] += actors.get(i).getWeight()
-									* actors.get(j).getWeight() * scene.getTotalCount();
+							mapEdgeData[positions.get(i)][positions.get(j)] += 
+								actors.get(i).getWeight() * actors.get(j).getWeight() * scene.getTotalCount();
 						// 가중치 = 배우가중치*상대배우가중치*씬에서 대화횟수
 					}
 				}
