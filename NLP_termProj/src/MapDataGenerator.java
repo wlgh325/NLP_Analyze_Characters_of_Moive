@@ -25,26 +25,26 @@ public class MapDataGenerator {
 		/* set nodes */
 		switch (NODE_PARAM) {
 		case NODE_WEIGHT_1:
-			mode += "NODE_WEIGHT_1-";
+			mode += "_NODE_WEIGHT_1-";
 			mapData.setNodeData(fillNodeDataByWeight1(scenes));
 			break;
 		case NODE_WEIGHT_COUNT:
-			mode += "NODE_WEIGHT_COUNT-";
+			mode += "_NODE_WEIGHT_COUNT-";
 			mapData.setNodeData(fillNodeDataByWeightByCount(scenes));
 			break;
 		}
 		/* set edges */
 		switch (EDGE_PARAM) {
 		case EDGE_WEIGHT_1:
-			mode += "EDGE_WEIGHT_1";
+			mode += "_EDGE_WEIGHT_1";
 			mapData.setEdgeData(fillEdgeDataByWeight1(scenes));
 			break;
 		case EDGE_WEIGHT_MULTIPLY:
-			mode += "EDGE_WEIGHT_MULTIPLY";
+			mode += "_EDGE_WEIGHT_MULTIPLY";
 			mapData.setEdgeData(fillEdgeDataByWeightMultiplex(scenes));
 			break;
 		case EDGE_WEIGHT_MULTIPLY_AND_COUNT:
-			mode += "EDGE_WEIGHT_MULTIPLY_AND_COUNT";
+			mode += "_EDGE_WEIGHT_MULTIPLY_AND_COUNT";
 			mapData.setEdgeData(fillEdgeDataByWeightMultiplexAndCount(scenes));
 			break;
 		}
