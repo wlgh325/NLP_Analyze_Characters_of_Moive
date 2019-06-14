@@ -15,11 +15,6 @@ public class ScriptAnalzer {
 	public ScriptAnalzer() {
 	}
 
-	/* 임계점을 사용자가 지정할 수 있도록 한다. */
-	public void setThresholds(double edge_threshold) {
-		this.edge_threshold = edge_threshold;
-	}
-
 	public void analyzeScriptFile(String inputFilePath) {
 		FileParser fileparser = new FileParser();
 		try {
@@ -35,10 +30,9 @@ public class ScriptAnalzer {
 		MapData mapData = mapDataGenerator.getMapData(node_mode, edge_mode, scenes);
 
 		System.out.println("노드 평균값 : " + mapData.getNodeAverage() + " 엣지 평균값 : " + mapData.getEdgeAverage());
-		System.out.println(
-				"노드 표준편차: " + mapData.getNodeStandardDeviation() + " 엣지 표준편차: " + mapData.getEdgeStandardDeviation());
+		System.out.println("노드 표준편차: " + mapData.getNodeStandardDeviation() + " 엣지 표준편차: " + mapData.getEdgeStandardDeviation());
 		edge_threshold = mapData.getEdgeAverage();
-//		edge_threshold = mapData.getEdgeAverage() + mapData.getEdgeStandardDeviation()/2;
+//		edge_threshold = mapData.getEdgeAverage() + mapData.getEdgeStandardDeviation();
 		System.out.println(mapData.getNodeData().size());
 		printData(mapData, outputFilePath);
 	}
