@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.TreeMap;
 
 public class MapData {
+	private String modeStr;
 	private TreeMap<String, Double> nodeData;	//	Node 정보: Actor 이름, 비중
 	private double[][] edgeData;					//	Edge 정보: [i][j] = 관계의 정도
 	
@@ -85,5 +86,12 @@ public class MapData {
 	public ArrayList<String> getNames() {
 		ArrayList<String> names = new ArrayList<>(nodeData.keySet());
 		return names;
+	}
+
+	public void setModeStr(String modeStr) {
+		this.modeStr = modeStr;
+	}
+	public String getModeStr() {
+		return modeStr;
 	}
 }

@@ -15,33 +15,40 @@ public class MapDataGenerator {
 	private ArrayList<String> actorNames; // 극중의 모든 배우들의 이름
 
 	public MapDataGenerator(ArrayList<Scene> scenes) {
-		this.mapData = new MapData();
 		setActorNames(scenes);
 	}
 
 	/* set MapData and return */
 	public MapData getMapData(int NODE_PARAM, int EDGE_PARAM, ArrayList<Scene> scenes) {
+		this.mapData = new MapData();
+		String mode = "";
 		/* set nodes */
 		switch (NODE_PARAM) {
 		case NODE_WEIGHT_1:
+			mode += "NODE_WEIGHT_1-";
 			mapData.setNodeData(fillNodeDataByWeight1(scenes));
 			break;
 		case NODE_WEIGHT_COUNT:
+			mode += "NODE_WEIGHT_COUNT-";
 			mapData.setNodeData(fillNodeDataByWeightByCount(scenes));
 			break;
 		}
 		/* set edges */
 		switch (EDGE_PARAM) {
 		case EDGE_WEIGHT_1:
+			mode += "EDGE_WEIGHT_1";
 			mapData.setEdgeData(fillEdgeDataByWeight1(scenes));
 			break;
 		case EDGE_WEIGHT_MULTIPLY:
+			mode += "EDGE_WEIGHT_MULTIPLY";
 			mapData.setEdgeData(fillEdgeDataByWeightMultiplex(scenes));
 			break;
 		case EDGE_WEIGHT_MULTIPLY_AND_COUNT:
+			mode += "EDGE_WEIGHT_MULTIPLY_AND_COUNT";
 			mapData.setEdgeData(fillEdgeDataByWeightMultiplexAndCount(scenes));
 			break;
 		}
+		mapData.setModeStr(mode);
 
 		return this.mapData;
 	}
